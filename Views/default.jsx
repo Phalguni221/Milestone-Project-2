@@ -19,10 +19,10 @@ function Def (html) {
                             <a href="/">Home</a>
                         </li>
                         <li>
-                        <a href="/places2">Places</a>
+                        <a href="/Home/Sign-in">Sign-in</a>
                         </li>
                         <li>
-                        <a href="/places2/new">Add Places</a>
+                        <a href="/Home/Jacket">Jackets</a>
                         </li>
                     </ul>
                 {html.children}
