@@ -11,7 +11,7 @@ const Home = () => {
             </head>
         <body>
         <p>Welcome to Finesse!
-            We are committed to providing you with the latest and most comfort
+            We are committed to providing you with the latest and most comfort 
         </p>
         </body>
         </div>

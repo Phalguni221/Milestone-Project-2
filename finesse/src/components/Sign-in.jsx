@@ -1,6 +1,6 @@
+import React from 'react';
+import Navbar from './Navbar';
 import './App.css'
-import Navbar from "./components/Navbar"
-
 
 
 const Signin = () => {
@@ -20,17 +20,7 @@ const Signin = () => {
     </p>
     </body>
     <footer>
-
-      Want to learn more about Finesse?
-      <p>
-       Please email us at Finesse@gmail.com 
-      <img class="img-fluid" src="https://bootstrapemail.com/some/image.png" alt="Some Image" />
-      </p>
-      <p>
-      OR call us at 732-546-9087!
-      <i class="bi bi-telephone"></i>
-      </p>
-
+    <Footer />
     </footer>
   </div>
         
