@@ -21,6 +21,12 @@
 12. Installed necessary files for the app - Sriya
      a. Did npm install node - Sriya
      b. Did npx create-react-app "Finesse" - Sriya
-13. 
+
+3/7/22 (Mon)
+13. Worked on front-end using React for Homepage -Sweta
+14. Worked on front-end using React for Sign-in page- Sriya
+15. Created other sections/pages of SPA site (Account.js, New-Member-Sign-up.js)
+16. Replaced App.js with Home.js in pages folder as primary root file for app (mentioned in index.js as <Home />) -Sriya
+17. Changed name of "App.test.js" to "Home.test.js" to test code in Home.js file - Sriya 
 
 
