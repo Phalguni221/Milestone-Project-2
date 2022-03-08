@@ -9,10 +9,12 @@ background-color: beige;
 h1{
    font:50px;
    color:black;
+   text-align: center;
 }
 
 h2 {
     font: 20px;
     color:black;
+    text-align: center;
 }
 
