@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import './App.css'
 
 
-const Signin = () => {
+export default function SignIn () {
   return (
   <div>
     <head>
@@ -27,4 +27,3 @@ const Signin = () => {
   )
 }
 
-export default Signin

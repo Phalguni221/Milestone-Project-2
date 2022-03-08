@@ -1,21 +1,24 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import './App.css'
 
 
-const Home = () => {
+export default function Home () {
     return (
         <div>
             <head>
-            <Navbar/>
+      
             </head>
         <body>
         <p>Welcome to Finesse!
             We are committed to providing you with the latest and most comfort 
         </p>
         </body>
+        <footer>
+         
+        </footer>
         </div>
     )
 }
 
-export default Home;

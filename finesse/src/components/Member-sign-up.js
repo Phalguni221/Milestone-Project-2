@@ -4,11 +4,11 @@ import './App.css';
 import Footer from './Footer'
 
 
-const MemberSignUp = () => {
+export default function MemberSignUp () {
   return (
   <div>
     <head>
-  <Navbar />
+<Navbar />
     </head>
     <body>
     <h1>New Member Sign-up Form</h1>
@@ -22,5 +22,3 @@ const MemberSignUp = () => {
         
   )
 }
-
-export default MemberSignUp
