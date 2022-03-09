@@ -2,7 +2,6 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
-
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import SignIn from './SignIn'
@@ -87,7 +86,6 @@ margin-right:300px;
 
 const Navbar = () => {
   return (
-
     <Container>
       <Wrapper>
           <Left>
@@ -112,15 +110,18 @@ const Navbar = () => {
           </Center>
 
           <Right>
-          <MenuItem>
+                <MenuItem>
                 <Link to="/">Home</Link>
-            </MenuItem>
-          <MenuItem>
-                <Link to="/Register">Register</Link>
-            </MenuItem>
-              <MenuItem>
+                </MenuItem>
+
+                <MenuItem>
+                <Link to="/Register"> Register</Link>
+                </MenuItem>
+
+                <MenuItem>
                 <Link to="/SignIn">Sign-in</Link>
-              </MenuItem>
+                </MenuItem>
+
               <div className="display">
         <Routes>
           <Route path="/Register" element={
@@ -129,12 +130,9 @@ const Navbar = () => {
           <Route path="/SignIn" element={
             <SignIn/>
             } />
-              </Routes>
+        </Routes>
               </div>
 
-            {/* <MenuItem>
-              SIGN IN
-            </MenuItem> */}
 
             <MenuItem>
             <Badge badgeContent={4} color="primary">
@@ -142,7 +140,7 @@ const Navbar = () => {
             </Badge>
             </MenuItem>
          
-          </Right>
+        </Right>
           
           
       </Wrapper>
