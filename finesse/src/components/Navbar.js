@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import SignIn from './SignIn'
 import Register from './Register'
+import Survey from './Survey'
 
 
 //React styled component in use
@@ -96,12 +97,14 @@ const Navbar = () => {
               <Search style={{ color: "purple", fontSize: 16 }}/>
             </SearchContainer> 
           </Left>
+        <p>
       <Video>
-      <p>Click for some background music while you shop!</p>
+        <p>Click for some background music while you shop!</p>
       <iframe width="50" height="30" src="https://www.youtube.com/embed/FxU7XEMonbk" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
       </Video>
+      </p>
           <Center>
             <Logo>
               FINESSE
@@ -122,6 +125,10 @@ const Navbar = () => {
                 <Link to="/SignIn">Sign-in</Link>
                 </MenuItem>
 
+                <MenuItem>
+                <Link to="/Survey">Survey</Link>
+                </MenuItem>
+
               <div className="display">
         <Routes>
           <Route path="/Register" element={
@@ -130,9 +137,11 @@ const Navbar = () => {
           <Route path="/SignIn" element={
             <SignIn/>
             } />
+             <Route path="/Survey" element={
+            <Survey/>
+            } />
         </Routes>
               </div>
-
 
             <MenuItem>
             <Badge badgeContent={4} color="primary">
