@@ -43,8 +43,6 @@ const Input = styled.input`
   border: 0.5px solid purple;
 `;
 
-
-
 //for LCR proper divider
 const Left = styled.div`
   flex: 1;
@@ -59,6 +57,9 @@ const Center = styled.div`
 
 //logo/name
 const Logo = styled.h1`
+flex: 1;
+display: flex;
+aline-item: center;
   font-weight: bold;
 `;
 
@@ -70,6 +71,12 @@ const Right = styled.div`
   justify-content: flex-end;
   `;
 
+//For Audio
+const Video = styled.div`
+text-align:center;
+margin-right:300px;
+
+`;
 
  //for menuitems, cart and all
  const MenuItem = styled.div`
@@ -80,6 +87,7 @@ const Right = styled.div`
 
 const Navbar = () => {
   return (
+
     <Container>
       <Wrapper>
           <Left>
@@ -90,7 +98,12 @@ const Navbar = () => {
               <Search style={{ color: "purple", fontSize: 16 }}/>
             </SearchContainer> 
           </Left>
-
+      <Video>
+      <p>Click for some background music while you shop!</p>
+      <iframe width="50" height="30" src="https://www.youtube.com/embed/FxU7XEMonbk" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </Video>
           <Center>
             <Logo>
               FINESSE
@@ -99,8 +112,10 @@ const Navbar = () => {
           </Center>
 
           <Right>
-         
-            <MenuItem>
+          <MenuItem>
+                <Link to="/">Home</Link>
+            </MenuItem>
+          <MenuItem>
                 <Link to="/Register">Register</Link>
             </MenuItem>
               <MenuItem>
@@ -120,6 +135,7 @@ const Navbar = () => {
             {/* <MenuItem>
               SIGN IN
             </MenuItem> */}
+
             <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
