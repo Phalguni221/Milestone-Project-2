@@ -9,7 +9,6 @@ const Container2 = styled.div `
  height:0.01px;
   width:600px;
   background-color: beige;
-
 `;
 
 //Parent-wrapper for nav 

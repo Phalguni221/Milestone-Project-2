@@ -1,28 +1,16 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
-import Announcement from '../components/Announcement';
+
+import Navbar from '../components/Navbar';
+import { BrowserRouter } from 'react-router-dom';
+import Announcements from '../components/Announcement';
 import Slider from '../components/Slider';
-import Navbar from '../components/Navbar'
-
-
-
 
 const Home = () => {
-    return (
-    
-        <BrowserRouter>
-        
-            <Announcement/>  
-
-
-        <Slider/>
-    
-    
-         
-
-        </BrowserRouter>
-     
-    )
+return(
+    <BrowserRouter>
+   <Navbar/>
+  
+    </BrowserRouter>
+  )
 }
 
 export default Home;

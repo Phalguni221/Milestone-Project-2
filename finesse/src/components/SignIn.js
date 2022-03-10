@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const Container2 = styled.div `
  height:0.01px;
-  width:600px;
+ width:600px;
   background-color: beige;
   align-items: center;
 

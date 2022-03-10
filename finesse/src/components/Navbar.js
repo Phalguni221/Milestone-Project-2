@@ -8,6 +8,7 @@ import {useState} from 'react'
 import SignIn from './SignIn'
 import Register from './Register'
 import Survey from './Survey'
+import Slider from './Slider'
 
 
 //React styled component in use
@@ -83,15 +84,16 @@ const Logo = styled.h1`
 flex: 1;
 display: flex;
 aline-item: center;
-  font-weight: bold;
+font-weight: bold;
 `;
 
 //For Right side things
 const Right = styled.div`
   flex: 1;
   display: flex;
-  // aline-item: center;
+  aline-item: center;
   justify-content: flex-end;
+  margin-right:500px;
   `;
 
 //For Audio
@@ -110,7 +112,6 @@ margin-right:300px;
 
 const Navbar = () => {
   return (
-  
     <Container>
       <Wrapper>
           <Left>
@@ -133,29 +134,43 @@ const Navbar = () => {
               FINESSE
             </Logo>     
           </Center>
-          <br></br>
-          <br></br>
+          <hr></hr>
        
           <Right>
+         <MenuItem>
+         <Link to="/Slider">
+         <form method="GET" action="Slider">
+             <input type="Submit" name="Home" id="Home" value="Home"/>
+             </form> 
+             </Link>    
+                </MenuItem>
+
+              <MenuItem>
+              <Link to="/Register">
+              <form method="GET" action="Register">
+             <input type="Submit" name="Register" id="Register" value="Register"/>
+             </form> 
+             </Link>
+             </MenuItem>
+
                 <MenuItem>
-                <Link to="/">Home</Link>
+                <form method="GET" action="SignIn">
+             <input type="Submit" name="SignIn" id="SignIn" value="SignIn"/>
+             </form> 
                 </MenuItem>
 
                 <MenuItem>
-                <Link to="/Register"> Register</Link>
-                </MenuItem>
-
-                <MenuItem>
-                <Link to="/SignIn">Sign-in</Link>
-                </MenuItem>
-
-                <MenuItem>
-                <Link to="/Survey">Survey</Link>
+                <form method="GET" action="Survey">
+             <input type="Submit" name="Survey" id="Survey" value="Survey"/>
+             </form> 
                 </MenuItem>
 
               <div className="display">
         <Routes>
-          <Route path="/Register" element={
+        <Route path="Slider" element={
+            <Slider/>
+          } />
+          <Route path="Register" element={
             <Register/>
           } />
           <Route path="/SignIn" element={
