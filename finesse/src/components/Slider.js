@@ -70,6 +70,29 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
+//For Title
+const Title = styled.h1`
+  font-size: 70px;
+`;
+
+//For Discription
+const Desc = styled.p`
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+
+//For Buttons
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: crimson;
+  cursor: pointer;
+`;
+
+
 
 function Slider() {
   return (
@@ -88,6 +111,11 @@ function Slider() {
             </ImgContainer>
 
             <InfoContainer>
+                <Title>SUMMER TIME GOOD TIME</Title>
+
+                <Desc>Summertime is beach time and  We have  hundreds of ways for you to enjoy your summer with Sun, Sand and Beach, Wanna Explore ?<br/>Why not !!!! <br/>Just click the Button Bellow to look our collection <br/>#HOTDAYS #FUNDAYS</Desc>
+
+                <Button>Collection</Button>
 
             </InfoContainer>
 
