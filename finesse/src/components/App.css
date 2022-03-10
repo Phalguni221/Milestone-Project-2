@@ -10,6 +10,7 @@ h1{
    font:50px;
    color:black;
    text-align: center;
+   margin-right:auto
 }
 
 h2 {
@@ -18,3 +19,7 @@ h2 {
     text-align: center;
 }
 
+button {
+    background-color: black;
+    color:pink;
+}

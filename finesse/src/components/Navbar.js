@@ -2,11 +2,11 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
-
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import SignIn from './SignIn'
 import Register from './Register'
+import Survey from './Survey'
 
 
 //React styled component in use
@@ -43,8 +43,6 @@ const Input = styled.input`
   border: 0.5px solid purple;
 `;
 
-
-
 //for LCR proper divider
 const Left = styled.div`
   flex: 1;
@@ -59,6 +57,9 @@ const Center = styled.div`
 
 //logo/name
 const Logo = styled.h1`
+flex: 1;
+display: flex;
+aline-item: center;
   font-weight: bold;
 `;
 
@@ -70,6 +71,12 @@ const Right = styled.div`
   justify-content: flex-end;
   `;
 
+//For Audio
+const Video = styled.div`
+text-align:center;
+margin-right:300px;
+
+`;
 
  //for menuitems, cart and all
  const MenuItem = styled.div`
@@ -90,7 +97,14 @@ const Navbar = () => {
               <Search style={{ color: "purple", fontSize: 16 }}/>
             </SearchContainer> 
           </Left>
-
+        <p>
+      <Video>
+        <p>Click for some background music while you shop!</p>
+      <iframe width="50" height="30" src="https://www.youtube.com/embed/FxU7XEMonbk" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </Video>
+      </p>
           <Center>
             <Logo>
               FINESSE
@@ -99,13 +113,22 @@ const Navbar = () => {
           </Center>
 
           <Right>
-         
-            <MenuItem>
-                <Link to="/Register">Register</Link>
-            </MenuItem>
-              <MenuItem>
+                <MenuItem>
+                <Link to="/">Home</Link>
+                </MenuItem>
+
+                <MenuItem>
+                <Link to="/Register"> Register</Link>
+                </MenuItem>
+
+                <MenuItem>
                 <Link to="/SignIn">Sign-in</Link>
-              </MenuItem>
+                </MenuItem>
+
+                <MenuItem>
+                <Link to="/Survey">Survey</Link>
+                </MenuItem>
+
               <div className="display">
         <Routes>
           <Route path="/Register" element={
@@ -114,19 +137,19 @@ const Navbar = () => {
           <Route path="/SignIn" element={
             <SignIn/>
             } />
-              </Routes>
+             <Route path="/Survey" element={
+            <Survey/>
+            } />
+        </Routes>
               </div>
 
-            {/* <MenuItem>
-              SIGN IN
-            </MenuItem> */}
             <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
             </MenuItem>
          
-          </Right>
+        </Right>
           
           
       </Wrapper>
