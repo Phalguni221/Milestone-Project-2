@@ -98,12 +98,12 @@ const Navbar = () => {
             </SearchContainer> 
           </Left>
         <p>
-      <Video>
+      {/* <Video>
         <p>Click for some background music while you shop!</p>
       <iframe width="50" height="30" src="https://www.youtube.com/embed/FxU7XEMonbk" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
-      </Video>
+      </Video> */}
       </p>
           <Center>
             <Logo>

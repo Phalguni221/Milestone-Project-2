@@ -1,14 +1,19 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+// import Navbar from '../components/Navbar';
+import { BrowserRouter } from 'react-router-dom'
+import Announcement from '../components/Announcement';
+import Slider from '../components/Slider';
+
 
 
 const Home = () => {
     return (
     
         <BrowserRouter>
-      
-            <Navbar /> 
+            <Announcement/>
+    
+            <Slider/>
+            
 
         </BrowserRouter>
      
@@ -16,5 +21,3 @@ const Home = () => {
 }
 
 export default Home;
- 
-

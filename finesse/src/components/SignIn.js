@@ -30,12 +30,16 @@ export default function SignIn () {
       <br></br>
       <br></br>
       <p>
-    <button type="button" onclick="./Survey.js" >Survey</button>
+    <form method="GET" action="Survey">
+    <input type="Submit" name="Survey" id="Survey" value="Survey"/>
+    </form>
     </p>
     <br></br>
     <br></br>
     <p>
-    <button type="button" onclick="./Account.js">Account</button>
+    <form method="GET" action="Account">
+      <input type="Submit" name="Account" id="Account" value="Account"/>
+      </form>
     </p>
     </Wrapper2>
     </Container2>
