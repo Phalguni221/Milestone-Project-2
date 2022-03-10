@@ -19,7 +19,7 @@ const Container = styled.div `
 
 //Parent-wrapper for nav 
 const Wrapper = styled.div `
-  padding: 10px 20px;
+  padding: 10px 50px;
   display:flex;
   align-items: center;
   margin-left:100px
