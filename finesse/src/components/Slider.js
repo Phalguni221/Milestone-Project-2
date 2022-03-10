@@ -118,6 +118,7 @@ const Button = styled.button`
 function Slider() {
   return (
     <Container>
+
       <Navbar/>
         <Arrow direction="left">
            <ArrowLeftOutlined/> 
@@ -148,7 +149,9 @@ function Slider() {
         <Arrow direction="right">
            <ArrowRightOutlined/> 
         </Arrow>
+
      </Container>
+
   )
 }
 
