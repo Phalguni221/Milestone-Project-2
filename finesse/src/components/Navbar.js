@@ -3,6 +3,7 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import {useState} from 'react'
 
 import SignIn from './SignIn'
 import Register from './Register'
@@ -11,16 +12,38 @@ import Survey from './Survey'
 
 //React styled component in use
 const Container = styled.div `
-  height: 60px;
+  height: 70px;
   background-color: pink;
-`
+`;
 
 //Parent-wrapper for nav 
 const Wrapper = styled.div `
   padding: 10px 20px;
-  display: flex;
+  display:flex;
   align-items: center;
+  margin-left:100px
   justify-content: space-between;
+`;
+
+
+// For Arrow style
+const Arrow = styled.div`
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: ${(props) => props.direction === "left" && "10px"};
+    right: ${(props) => props.direction === "right" && "10px"};;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 2;
 `;
 
 //for EN lang
@@ -35,7 +58,7 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px
+  padding: 1px
 `;
 
 //for searchbar input
@@ -67,7 +90,7 @@ aline-item: center;
 const Right = styled.div`
   flex: 1;
   display: flex;
-  aline-item: center;
+  // aline-item: center;
   justify-content: flex-end;
   `;
 
@@ -75,23 +98,23 @@ const Right = styled.div`
 const Video = styled.div`
 text-align:center;
 margin-right:300px;
-
 `;
 
  //for menuitems, cart and all
  const MenuItem = styled.div`
- font-size: 14px;
+ font-size: 17px;
  cursor: pointer;
- margin-left: 25px;
+ margin-right: 35px;
  `; 
+
 
 const Navbar = () => {
   return (
+  
     <Container>
       <Wrapper>
           <Left>
             <Language>EN</Language>
-
             <SearchContainer>
               <Input/>
               <Search style={{ color: "purple", fontSize: 16 }}/>
@@ -108,10 +131,11 @@ const Navbar = () => {
           <Center>
             <Logo>
               FINESSE
-            </Logo>
-            
+            </Logo>     
           </Center>
-
+          <br></br>
+          <br></br>
+       
           <Right>
                 <MenuItem>
                 <Link to="/">Home</Link>

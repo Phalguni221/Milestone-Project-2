@@ -1,39 +1,21 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
-import styled from "styled-components"
-import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import styled from "styled-components";
+import { useState } from "react";
+import { sliderItems } from "../data";
 import Navbar from './Navbar'
 
-import SignIn from './SignIn'
-import Register from './Register'
-import Survey from './Survey'
-
 // Container
-// const Container = styled.div`
-//     width: 100%;
-//     height: 100vh;
-//     display: flex;
-//     position: relative;
-//     overflow: hidden;
-//     background-color: pink;
-//     position: relative;
-// `;
+const Container = styled.div`
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: biege;
+    position: relative;
+    margin-right:50px
+`;
 
-//React styled component in use
-const Container = styled.div `
-  height: 60px;
-  background-color: pink;
-`
-
-// //Parent-wrapper for nav 
-// const Wrapper = styled.div `
-//   padding: 10px 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// `;
 
 // For Arrow style
 const Arrow = styled.div`
@@ -56,7 +38,6 @@ const Arrow = styled.div`
 `;
 
 
-
 // Wrapper for Images
 const Wrapper = styled.div`
   height: 100%;
@@ -76,18 +57,18 @@ const Slide = styled.div`
 
 //For Image Container
 const ImgContainer = styled.div`
-  height: 100%;
+  height: 85%;
   flex: 1;
 `;
 
 
 const Image = styled.img`
-  height: 80%;
+  height: 95%;
 `;
 
 //For Info Container
 const InfoContainer = styled.div`
-  flex: 1;
+  // flex: 1;
   padding: 50px;
 `;
 
@@ -114,45 +95,43 @@ const Button = styled.button`
 `;
 
 
+const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
 
-function Slider() {
   return (
+    <div>
     <Container>
-
-      <Navbar/>
-        <Arrow direction="left">
-           <ArrowLeftOutlined/> 
-        </Arrow>
-
-
-          {/* to write slides */}
-        <Wrapper>
-            <Slide>
-
+      <Navbar />
+      <Arrow direction="left" onClick={() => handleClick("left")}>
+        <ArrowLeftOutlined />
+      </Arrow>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
             <ImgContainer>
-                <Image src="https://images.unsplash.com/photo-1644577584452-ea4d39b9dcf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2008&q=80"/>
+              <Image src={item.img} />
             </ImgContainer>
-
             <InfoContainer>
-                <Title>SUMMER TIME GOOD TIME</Title>
-
-                <Desc>Summertime is beach time and  We have  hundreds of ways for you to enjoy your summer with Sun, Sand and Beach, Wanna Explore ?<br/>Why not !!!! <br/>Just click the Button Bellow to look our collection <br/>#HOTDAYS #FUNDAYS</Desc>
-
-                <Button>Collection</Button>
-
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>SHOW NOW</Button>
             </InfoContainer>
+          </Slide>
+        ))}
+      </Wrapper>
+      <Arrow direction="right" onClick={() => handleClick("right")}>
+        <ArrowRightOutlined />
+      </Arrow>
+    </Container>
+    </div>
+  );
+};
 
-            </Slide>
-            
-        </Wrapper>
-
-        <Arrow direction="right">
-           <ArrowRightOutlined/> 
-        </Arrow>
-
-     </Container>
-
-  )
-}
-
-export default Slider
+export default Slider;
