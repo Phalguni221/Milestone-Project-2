@@ -31,12 +31,12 @@ router.delete('/shoppingcart/:id', (req, res) => {
   if (isNaN(id)) {
     res.render('error404')
   }
-  else if (!places[id]) {
+  else if (!shoppingcart[id]) {
     res.render('error404')
   }
   else {
-    places.splice(id, 1)
-    res.redirect('/places')
+   shoppingcart.splice(id, 1)
+    res.redirect('/shoppingcart')
   }
 })
 
