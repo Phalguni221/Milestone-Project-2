@@ -4,17 +4,11 @@ import { useState } from "react";
 import { sliderItems } from "../data";
 
 
-// Container
 const Container = styled.div`
-    width: 100%;
-    height: 100vh;
     display: flex;
-    position: relative;
-    overflow: hidden;
-    background-color: fedada;
-    position: relative;
+    padding: 20px;
+    justify-content: space-between;
 `;
-
 
 // For Arrow style
 const Arrow = styled.div`
@@ -92,9 +86,15 @@ const Button = styled.button`
   font-size: 20px;
   background-color: crimson;
   cursor: pointer;
+  `;
+
+
+
+const CategoryContainer = styled.div`
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
 `;
-
-
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -130,6 +130,7 @@ const Slider = () => {
         <ArrowRightOutlined />
       </Arrow>
       </Container>
+     
       </div>
   );
 };
