@@ -2,7 +2,8 @@
 import Navbar from '../components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 import Announcements from '../components/Announcement';
-import Slider from '../components/Slider';
+// import Categories from '../components/Categories';
+// import Footer from '../components/Footer'
 
 const Home = () => {
 return(

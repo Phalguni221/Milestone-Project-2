@@ -190,9 +190,8 @@ const Navbar = () => {
          
         </Right>
           
-          
       </Wrapper>
-      
+    
     </Container>
   )
 }
