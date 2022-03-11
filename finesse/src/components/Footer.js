@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
     padding:750px;
     text-align:center;
+    position:fidxed;
    
 `;
 
