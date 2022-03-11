@@ -7,8 +7,9 @@ import Slider from '../components/Slider';
 const Home = () => {
 return(
     <BrowserRouter>
+  <Announcements/>
    <Navbar/>
-  
+
     </BrowserRouter>
   )
 }
