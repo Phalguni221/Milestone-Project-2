@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import { popularProducts } from '../../../../Finesse-Project-Sweta Changes/finesse/src/data';
+import { popularProducts } from '../data';
 import Product from "./Product";
 
 //For the whole product Comtainer
