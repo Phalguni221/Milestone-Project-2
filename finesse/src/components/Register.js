@@ -7,11 +7,11 @@ import SignIn from './SignIn.js'
 
 const Container2 = styled.div `
  height:0.01px;
-  width:600px;
+  width:700px;
   background-color: beige;
 `;
 
-//Parent-wrapper for nav 
+//Parent-wrapper for navbar 
 const Wrapper2 = styled.div `
   padding: 200px 100px;
   justify-content: space-between;

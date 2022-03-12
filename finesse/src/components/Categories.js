@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { categories } from "../data";
-import CategoryItem from "./CategoryItem";
+import { categories } from "../../../../Finesse-Project-Sweta Changes/finesse/src/data";
+import CategoryItem from "../../../../Finesse-Project-Sweta Changes/finesse/src/components/CategoryItem";
 
 
 const Container = styled.div`

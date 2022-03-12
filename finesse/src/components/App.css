@@ -19,6 +19,13 @@ h2 {
     text-align: center;
 }
 
+text {
+    background-color:black; 
+    color:hotpink;
+    font-size:20px;
+    padding:2px;
+}
+
 input {
     background-color: black;
     color:pink;

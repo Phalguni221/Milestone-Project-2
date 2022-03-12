@@ -7,6 +7,7 @@ import styled from 'styled-components'
 const Container2 = styled.div `
  height:0.01px;
  width:600px;
+
   background-color: beige;
   align-items: center;
 
@@ -30,7 +31,7 @@ export default function SignIn () {
       <br></br>
       <br></br>
       <p>
-    <form method="GET" action="Survey">
+        <form method="GET" action="Survey">
     <input type="Submit" name="Survey" id="Survey" value="Survey"/>
     </form>
     </p>
